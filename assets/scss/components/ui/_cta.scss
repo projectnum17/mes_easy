@@ -1,0 +1,49 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+@use '../../base/var' as *;
+
+.cta {
+    font: 500 #{rem(14px)} / 150% $ff;
+    overflow: hidden;
+    position: relative;
+    border-radius: rem(10px) 0 rem(10px) 0;
+    padding: rem(8px) rem(32px);
+    border: 1px solid transparent;
+    background: $c_pink;
+    color: $c_wht;
+    @include transitions(0.3s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    @include hover {
+        opacity: 0.99 !important;
+        border-radius: rem(8px) 0 rem(8px) 0;
+        color: $c_drk;
+        border: 1px solid $c_pink;
+
+        @include media('tablet_above') {
+            border-radius: rem(12px) 0 rem(12px) 0;
+        }
+
+        span {
+            width: 225%;
+            height: 300px;
+        }
+    }
+
+    @include media('tablet_above') {
+        font-size: rem(16px);
+        border-radius: rem(20px) 0 rem(20px) 0;
+    }
+
+    span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        transition:
+            width 0.4s cubic-bezier(0.768, 0.304, 0.496, 0.884),
+            height 0.4s cubic-bezier(0.768, 0.304, 0.496, 0.884);
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        background: $c_wht;
+    }
+}

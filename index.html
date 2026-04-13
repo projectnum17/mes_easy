@@ -4,11 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/imgs/favicon/favicon.png" type="image/png">
+
+    <link rel="preload" href="./assets/fonts/ff_400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/ff_700.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="./assets/css/main.min.css">
     <title>MesEasy</title>
 </head>
 
 <body>
-
+    <header class="header js-header">
+        <div class="header__panel">
+            <div class="container">
+                <a href="javascript: void(0)" class="header__logo">
+                    <img width="120" height="71" src="./assets/imgs/ico/logo.png" alt="Logo">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li>
+                            <a href="javascript: void(0)">Home</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">About</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">Services</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="javascript: void(0)" class="cta js-cta">
+                    Termin Buchen
+                    <span></span>
+                </a>
+                <button type="button" class="header__burger js-menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">main</main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__box">
+                    <p class="footer__title">Noran</p>
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="javascript: void(0)">Home</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">About</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">Services</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__box">
+                    <p class="footer__title">Mehr</p>
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="javascript: void(0)">Start</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">Termin buchen</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">Referenzen</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">Artikel</a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0)">Landingpage</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <div class="row">
+                        <p class="footer__title">Kontakt</p>
+                        <ul class="footer__connect">
+                            <li>
+                                <a href="tel:+0123456789">0123456789</a>
+                            </li>
+                            <li>
+                                <a href="mailto:hello@mail.de">hello@mail.de</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <p class="footer__title">Social media</p>
+                        <ul class="footer__soc">
+                            <li>
+                                <a href="javascript: void(0)" target="_blank">
+                                    <img width="24" height="24" decoding="async" loading="lazy"
+                                        src="./assets/imgs/ico/in.svg" alt="Icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bot">
+                <div class="footer__logo">
+                    <img decoding="async" loading="lazy" width="70" height="37" src="./assets/imgs/ico/footer_1.png"
+                        alt="Icon">
+                </div>
+                <ul class="footer__legals">
+                    <li>
+                        <a href="javascript: void(0)" target="_blank">Datenschutz</a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0)" target="_blank">Impressum</a>
+                    </li>
+                </ul>
+                <div class="footer__ico">
+                    <img width="64" height="64" loading="lazy" decoding="async" src="./assets/imgs/ico/footer_2.png"
+                        alt="Icon">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="mobile-menu js-menu">
+        <div class="mobile-menu__content">
+            <nav class="mobile-menu__nav">
+                <ul>
+                    <li>
+                        <a href="#section_1">Home</a>
+                    </li>
+                    <li>
+                        <a href="#section_2">About</a>
+                    </li>
+                    <li>
+                        <a href="#section_3">Services</a>
+                    </li>
+                    <li>
+                        <a href="#section_4">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="javascript: void(0)" class="mobile-menu__link cta js-cta">
+                Termin Buchen
+                <span></span>
+            </a>
+        </div>
+    </div>
+    <script defer type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,22 @@
+@use 'media' as *;
+@use 'mixins' as *;
+
+$ff: 'Inter', sans-serif;
+
+$container_wdth: #{rem(1275px)};
+$container_pdd: #{rem(12px)};
+
+$c_pink: #e62073;
+$c_drk: #1a1a1a;
+$c_drk_hlf: #1a1a1ab2;
+$c_wht: #ffffff;
+
+:root {
+    --section_indent: #{rem(64px)};
+}
+
+@include media('tablet_above') {
+    :root {
+        --section_indent: #{rem(128px)};
+    }
+}

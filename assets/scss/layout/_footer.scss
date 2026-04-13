@@ -1,0 +1,186 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.footer {
+    box-shadow: 0px -3px 16.3px 0px #0000001c;
+
+    &__top {
+        padding-block: rem(45px);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: rem(12px);
+        flex-wrap: wrap;
+        @include media('tablet_above') {
+            padding-inline: rem(40px);
+        }
+    }
+
+    &__bot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(24px);
+        @include media('tablet_above') {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__box {
+        @include media('tablet_above') {
+            max-width: rem(308px);
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font: 700 #{rem(14px)} / 150% $ff;
+        margin-bottom: rem(14px);
+        @include media('tablet_above') {
+            font-size: rem(16px);
+            margin-bottom: rem(16px);
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12px);
+
+        @include media('tablet_above') {
+            gap: rem(16px);
+        }
+
+        li {
+            font: 400 #{rem(14px)} / 170% $ff;
+            @include media('tablet_above') {
+                font-size: rem(16px);
+            }
+        }
+
+        a {
+            font: inherit;
+            color: $c_drk_hlf;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                color: $c_pink;
+            }
+        }
+    }
+
+    &__connect {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            font: 400 #{rem(16px)} / 170% $ff;
+            @include media('tablet_above') {
+                font-size: rem(18px);
+            }
+        }
+
+        a {
+            font: inherit;
+            color: $c_drk_hlf;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                color: $c_pink;
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24px);
+
+        .row {
+            &:last-child {
+                .footer__title {
+                    @include media('tablet_above') {
+                        margin-bottom: rem(24px);
+                    }
+                }
+            }
+        }
+    }
+
+    &__soc {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: rem(12px);
+
+        li {
+            width: rem(24px);
+            height: rem(24px);
+
+            a {
+                width: 100%;
+                height: 100%;
+                @include transitions(
+                    0.3s,
+                    cubic-bezier(0.768, 0.304, 0.496, 0.884)
+                );
+                @include hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    &__legals {
+        display: flex;
+        align-items: center;
+        gap: rem(24px);
+
+        li {
+            font: 400 #{rem(12px)} / 170% $ff;
+        }
+
+        a {
+            font: inherit;
+            @include transitions(
+                0.3s,
+                cubic-bezier(0.768, 0.304, 0.496, 0.884)
+            );
+            @include hover {
+                color: $c_pink;
+            }
+        }
+    }
+
+    &__logo {
+        max-width: rem(90px);
+        @include media('tablet_above') {
+            max-width: rem(140px);
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__ico {
+        width: rem(86px);
+        height: rem(86px);
+        @include media('tablet_above') {
+            width: rem(128px);
+            height: rem(128px);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
