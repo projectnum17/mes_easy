@@ -7,7 +7,7 @@ const scrollPinHandler = () => {
 
     if (!items.length || !triggerElement || !pic) return;
 
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
 
     mm.add(
         {
@@ -15,28 +15,32 @@ const scrollPinHandler = () => {
             isMobile: '(max-width: 1023px)',
         },
         (context) => {
-            let { isDesktop } = context.conditions;
+            const { isDesktop } = context.conditions;
+
+            gsap.set(pic, {
+                clearProps: 'transform',
+                scale: isDesktop ? 1.3 : 1,
+            });
 
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: triggerElement,
                     start: 'top top',
                     end: () => `+=${items.length * 400}`,
-                    scrub: 1,
+                    scrub: .2,
                     pin: true,
                     anticipatePin: 1,
                     invalidateOnRefresh: true,
                 },
             });
 
-            gsap.set(pic, { scale: isDesktop ? 1.3 : 1 });
-
             tl.to(
                 pic,
                 {
                     y: () => {
                         const totalHeight = triggerElement.offsetHeight;
-                        const picHeight = pic.offsetHeight;
+                        const picHeight = pic.getBoundingClientRect().height;
+
                         return totalHeight - picHeight;
                     },
                     scale: isDesktop ? 0.9 : 1.3,
@@ -58,9 +62,10 @@ const scrollPinHandler = () => {
                 0,
             );
 
-            tl.to({}, { duration: 0.3 });
-
-            return () => {};
+            return () => {
+                tl.kill();
+                gsap.set(pic, { clearProps: 'all' });
+            };
         },
     );
 };
