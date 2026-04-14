@@ -1,0 +1,161 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.text-image {
+    &__boxes {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24px);
+
+        @include media('tablet_above') {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__report {
+        margin-bottom: var(--section_indent);
+        @include media('tablet_above') {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: rem(24px);
+        }
+        @include media('laptop_above') {
+            gap: rem(65px);
+        }
+    }
+
+    &__preview {
+        max-width: rem(400px);
+        margin: 0 auto rem(24px);
+        width: 100%;
+        @include media('tablet_above') {
+            margin: 0;
+            flex: 1;
+            max-width: 100%;
+        }
+        @include media('laptop_above') {
+            max-width: rem(571px);
+        }
+    }
+
+    &__details {
+        @include media('tablet_above') {
+            max-width: rem(500px);
+        }
+        @include media('laptop_above') {
+            max-width: rem(611px);
+        }
+    }
+
+    &__text {
+        margin-bottom: rem(24px);
+        @include media('laptop_above') {
+            margin-bottom: rem(48px);
+        }
+
+        p {
+            font: 400 #{rem(14px)} / 170% $ff;
+            color: $c_drk_hlf;
+            @include media('laptop_above') {
+                font-size: rem(16px);
+            }
+
+            &:not(:last-child) {
+                margin-bottom: rem(12px);
+                @include media('laptop_above') {
+                    margin-bottom: rem(24px);
+                }
+            }
+        }
+    }
+
+    &__stats {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: rem(12px);
+        border-radius: rem(20px) 0 rem(20px) 0;
+        padding: rem(15px);
+        margin-top: rem(-75px);
+        background: #ffffff1a;
+        backdrop-filter: blur(15px) saturate(180%) contrast(100%);
+        border: 1px solid $c_pink;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        @include media('laptop_above') {
+            margin-top: rem(-150px);
+        }
+        @include media('desktop_above') {
+            flex-direction: row;
+            padding: rem(31px);
+            gap: rem(40px);
+            border-radius: rem(40px) 0 rem(40px) 0;
+        }
+
+        li {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(8px);
+
+            @include media('desktop_above') {
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            &:not(:last-child) {
+                padding-bottom: rem(12px);
+                border-bottom: 1px solid $c_pink;
+                @include media('desktop_above') {
+                    padding-bottom: 0;
+                    padding-right: rem(40px);
+                    border-bottom: none;
+                    border-right: 1px solid $c_pink;
+                }
+            }
+        }
+    }
+
+    &__descr {
+        font: 400 #{rem(14px)} / 150% $ff;
+        color: $c_pink;
+        @include media('tablet_above') {
+            font-size: rem(16px);
+        }
+    }
+
+    &__ico {
+        width: rem(20px);
+        height: rem(20px);
+        @include media('tablet_above') {
+            width: rem(40px);
+            height: rem(40px);
+        }
+    }
+
+    &__val {
+        font: 700 #{rem(32px)} / 100% $ff;
+        color: $c_pink;
+        @include media('tablet_above') {
+            font-size: rem(48px);
+        }
+
+        @include media('laptop_above') {
+            font-size: rem(64px);
+        }
+    }
+
+    .action {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .morph {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,110 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(12px);
+    padding-bottom: rem(24px);
+    border-bottom: 1px solid #1a1a1a40;
+
+    &:has(.info-box__label) {
+        .info-box__head {
+            gap: 0;
+        }
+
+        .info-box__val {
+            margin-bottom: rem(8px);
+        }
+    }
+
+    @include media('tablet_above') {
+        align-items: flex-start;
+        padding-bottom: 0;
+        padding-left: rem(12px);
+        border-bottom: none;
+        border-left: 1px solid #1a1a1a40;
+    }
+    @include media('laptop_above') {
+        gap: rem(48px);
+        padding: rem(36px) 0 0 rem(39px);
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: rem(4px);
+        @include media('tablet_above') {
+            align-items: flex-start;
+            text-align: left;
+        }
+        @include media('laptop_above') {
+            gap: rem(8px);
+        }
+    }
+
+    &__ico {
+        width: rem(20px);
+        height: rem(20px);
+        @include media('tablet_above') {
+            width: rem(40px);
+            height: rem(40px);
+        }
+    }
+
+    &__detail {
+        font: 400 #{rem(14px)} / 170% $ff;
+        color: $c_drk_hlf;
+        @include media('tablet_above') {
+            font-size: rem(16px);
+        }
+    }
+
+    &__val {
+        font: 700 #{rem(32px)} / 100% $ff;
+        color: $c_pink;
+        @include media('tablet_above') {
+            font-size: rem(48px);
+        }
+
+        @include media('laptop_above') {
+            font-size: rem(64px);
+        }
+    }
+
+    &__label {
+        display: inline-flex;
+        width: max-content;
+        margin-bottom: rem(20px);
+        font: 700 #{rem(12px)} / 170% $ff;
+        letter-spacing: 1px;
+        border-radius: rem(6px) 0 rem(6px) 0;
+        padding: rem(6px) rem(12px);
+        text-transform: uppercase;
+        color: $c_pink;
+        background: #e6207340;
+        @include media('tablet_above') {
+            border-radius: rem(10px) 0 rem(10px) 0;
+            padding: rem(8px) rem(16px);
+            margin-bottom: rem(40px);
+        }
+    }
+
+    &__text {
+        font: 400 #{rem(14px)} / 170% $ff;
+        text-align: center;
+        color: $c_drk_hlf;
+        @include media('tablet_above') {
+            font-size: rem(16px);
+            text-align: left;
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.machine {
+    overflow: hidden;
+    &__content {
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: rem(1180px);
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: var(--section_indent);
+        @include media('tablet_above') {
+            min-height: auto;
+            max-width: rem(850px);
+        }
+    }
+
+    &__points {
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: rem(6px);
+            position: absolute;
+            max-width: rem(300px);
+            z-index: 2;
+            border-radius: rem(20px) 0 rem(20px) 0;
+            padding: rem(11px);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px) saturate(180%) contrast(100%);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid #1a1a1a1a;
+
+            @include media('laptop_above') {
+                padding: rem(23px);
+                border-radius: rem(40px) 0 rem(40px) 0;
+                gap: rem(10px);
+                max-width: rem(400px);
+            }
+
+            img {
+                width: rem(20px);
+                height: rem(20px);
+                @include media('tablet_above') {
+                    width: rem(40px);
+                    height: rem(40px);
+                }
+            }
+
+            p {
+                font: 400 #{rem(14px)} / 170% $ff;
+
+                @include media('tablet_above') {
+                    font-size: rem(16px);
+                }
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            &:nth-child(1) {
+                top: rem(120px);
+                left: 0;
+                @include media('laptop_above') {
+                    top: rem(250px);
+                    left: rem(-150px);
+                }
+            }
+
+            &:nth-child(2) {
+                top: rem(270px);
+                right: 0;
+
+                @include media('laptop_above') {
+                    top: rem(160px);
+                    right: rem(-150px);
+                }
+            }
+
+            &:nth-child(3) {
+                left: 0;
+                bottom: rem(200px);
+
+                @include media('laptop_above') {
+                    left: rem(-200px);
+                    bottom: rem(50px);
+                }
+            }
+
+            &:nth-child(4) {
+                right: 0;
+                bottom: rem(40px);
+                @include media('laptop_above') {
+                    right: rem(-200px);
+                    bottom: rem(100px);
+                }
+            }
+        }
+    }
+}

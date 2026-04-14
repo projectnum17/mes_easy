@@ -1,0 +1,191 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.slider {
+    &__nav {
+        margin-top: rem(20px);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: rem(8px);
+        &:has(.swiper-button-lock) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        width: rem(32px);
+        height: rem(32px);
+        color: $c_pink;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+
+        &.swiper-button-disabled {
+            opacity: 0.25;
+            color: $c_drk;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:last-child {
+            transform: rotate(180deg);
+        }
+    }
+
+    .slider-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(12px);
+
+        @include media('tablet_above') {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .morph {
+            max-width: rem(450px);
+            width: 100%;
+            height: auto;
+
+            @include media('tablet_above') {
+                width: 50%;
+                max-width: 100%;
+            }
+
+            @include media('laptop_above') {
+                width: 100%;
+                max-width: rem(576px);
+            }
+        }
+
+        &__title {
+            font: 700 #{rem(32px)} / 100% $ff;
+            margin-bottom: rem(12px);
+            text-transform: capitalize;
+
+            @include media('laptop_above') {
+                font-size: rem(48px);
+                margin-bottom: rem(24px);
+            }
+
+            span {
+                color: $c_pink;
+            }
+        }
+
+        &__info {
+            @include media('tablet_above') {
+                width: 50%;
+            }
+
+            @include media('laptop_above') {
+                width: 100%;
+                max-width: rem(612px);
+            }
+        }
+
+        &__text {
+            margin-bottom: rem(20px);
+            p {
+                font: 400 #{rem(14px)} / 170% $ff;
+                margin: 0;
+                color: $c_drk_hlf;
+                @include media('laptop_above') {
+                    font-size: rem(16px);
+                }
+
+                span {
+                    font-weight: 700;
+                    color: $c_drk;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: rem(12px);
+                    @include media('laptop_above') {
+                        margin-bottom: rem(24px);
+                    }
+                }
+            }
+        }
+
+        &__list {
+            gap: rem(24px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            @include media('tablet_above') {
+                flex-direction: row;
+            }
+
+            @include media('laptop_above') {
+                gap: rem(48px);
+            }
+        }
+
+        &__point {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: rem(4px);
+            width: 100%;
+            padding-bottom: rem(24px);
+            border-bottom: 1px solid #1a1a1a40;
+            @include media('tablet_above') {
+                padding-bottom: 0;
+                padding-left: 12px;
+                border-left: 1px solid #1a1a1a40;
+                border-bottom: none;
+            }
+
+            @include media('laptop_above') {
+                align-items: flex-start;
+                text-align: left;
+                padding-left: 0;
+                border: none;
+
+                &:not(:last-child) {
+                    padding-right: rem(48px);
+                    border-right: 1px solid #1a1a1a40;
+                }
+            }
+        }
+
+        &__ico {
+            width: rem(20px);
+            height: rem(20px);
+            @include media('tablet_above') {
+                width: rem(40px);
+                height: rem(40px);
+            }
+        }
+
+        &__detail {
+            font: 400 #{rem(14px)} / 170% $ff;
+            color: $c_drk_hlf;
+            font: 400 #{rem(14px)} / 170% $ff;
+            color: $c_drk_hlf;
+            @include media('tablet_above') {
+                font-size: rem(16px);
+            }
+        }
+
+        &__val {
+            font: 700 #{rem(32px)} / 100% $ff;
+            color: $c_pink;
+            @include media('tablet_above') {
+                font-size: rem(48px);
+            }
+
+            @include media('laptop_above') {
+                font-size: rem(64px);
+            }
+        }
+    }
+}

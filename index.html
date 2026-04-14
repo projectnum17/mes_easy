@@ -9,7 +9,9 @@
     <link rel="preload" href="./assets/fonts/ff_400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./assets/fonts/ff_700.woff2" as="font" type="font/woff2" crossorigin>
 
+    <link rel="stylesheet" href="./assets/libs/swiper/swiper.min.css">
     <link rel="stylesheet" href="./assets/css/main.min.css">
+
     <title>MesEasy</title>
 </head>
 
@@ -36,7 +38,7 @@
                         </li>
                     </ul>
                 </nav>
-                <a href="javascript: void(0)" class="cta js-cta">
+                <a href="javascript: void(0)" class="action action--sm js-action">
                     Termin Buchen
                     <span></span>
                 </a>
@@ -48,7 +50,1166 @@
             </div>
         </div>
     </header>
-    <main class="main">main</main>
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-head__reviews">
+                        <div class="section-head__users">
+                            <img src="./assets/imgs/ico/cust_1.png" alt="Icon">
+                            <img src="./assets/imgs/ico/cust_2.png" alt="Icon">
+                            <img src="./assets/imgs/ico/cust_3.png" alt="Icon">
+                        </div>
+                        <p>+500 new customers joined us</p>
+                    </div>
+                    <h2 class="section-head__title">
+                        Fuse tritique ante <span>laoreet euismod</span>
+                    </h2>
+                    <p class="section-head__descr">
+                        Vivamus id est sed tortor molestie suscipit vitae non elit. Nunc efficitur vitae orci
+                        vitae
+                        sagittis.
+                        Nulla ac mattis libero, eget dapibus nibh.
+                    </p>
+                </div>
+                <div class="hero__steps">
+                    <ul class="hero__list hero__list--top">
+                        <li class="hero__point hero__point--do">To Do</li>
+                        <li class="hero__point hero__point--done">Done</li>
+                    </ul>
+                    <ul class="hero__list hero__list--low">
+                        <li class="hero__point hero__point--progress">In Progress</li>
+                        <li class="hero__point hero__point--img">
+                            <img src="./assets/imgs/ico/aws.png" alt="Icon">
+                        </li>
+                    </ul>
+                    <ul class="hero__list hero__list--mid">
+                        <li class="hero__point hero__point--img">
+                            <img src="./assets/imgs/ico/vue.png" alt="Icon">
+                        </li>
+                        <li class="hero__point hero__point--img">
+                            <img src="./assets/imgs/ico/git.png" alt="Icon">
+                        </li>
+                    </ul>
+                    <ul class="hero__list hero__list--bot">
+                        <li class="hero__point hero__point--hold">On Hold</li>
+                        <li class="hero__point hero__point--img">
+                            <img src="./assets/imgs/ico/node.png" alt="Icon">
+                        </li>
+                    </ul>
+                    <div class="hero__lines js-lines">
+                        <svg class="line line--top" width="1146" height="116" viewBox="0 0 1146 116" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.1" stroke="#1A1A1A"
+                                d="M0 0.5 H216 C222.405 0.5 230.155 3.507 236.767 8.48 C243.38 13.455 248.969 19.982 250.976 26.146 C253 32.365 253.645 41.034 253.975 50.472 C254.305 59.941 254.318 70.199 255.056 79.707 C255.794 89.219 257.253 97.888 260.433 104.168 C262.019 107.301 264.024 109.819 266.562 111.555 C269.097 113.287 272.193 114.261 276 114.261 H869.5 C873.307 114.261 876.403 113.287 878.938 111.555 C881.476 109.819 883.481 107.301 885.067 104.168 C888.247 97.888 889.706 89.219 890.444 79.707 C891.182 70.199 891.195 59.941 891.525 50.472 C891.855 41.034 892.5 32.365 894.524 26.146 C896.531 19.982 902.12 13.455 908.733 8.48 C915.345 3.507 923.095 0.5 929.5 0.5 H1146" />
+                        </svg>
+
+                        <svg class="line line--mid" width="1146" height="1" viewBox="0 0 1146 1" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.1" stroke="#1A1A1A" d="M1146 0.5 L0 0.5" />
+                        </svg>
+
+                        <svg class="line line--bot" width="1146" height="116" viewBox="0 0 1146 116" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.1" stroke="#1A1A1A"
+                                d="M0 115.261 H216 C222.405 115.261 230.155 111.753 236.767 106.78 C243.38 101.806 248.969 95.279 250.976 89.115 C253 82.896 253.645 74.227 253.975 64.789 C254.305 55.32 254.318 45.062 255.056 35.554 C255.794 26.042 257.253 17.373 260.433 11.093 C262.019 7.96 264.024 5.442 266.562 3.706 C269.097 1.974 272.193 1 276 1 H869.5 C873.307 1 876.403 1.974 878.938 3.706 C881.476 5.442 883.481 7.96 885.067 11.093 C888.247 17.373 889.706 26.042 890.444 35.554 C891.182 45.062 891.195 55.32 891.525 64.789 C891.855 74.227 892.5 82.896 894.524 89.115 C896.531 95.279 902.12 101.806 908.733 106.78 C915.345 111.753 923.095 115.261 929.5 115.261 H1146" />
+                        </svg>
+                    </div>
+                    <div class="hero__pic">
+                        <img src="./assets/imgs/woman.png" alt="Picture">
+                    </div>
+                </div>
+                <ul class="hero__cards">
+                    <li class="benefit-box">
+                        <img width="20" height="20" src="./assets/imgs/ico/hero_1.svg" alt="Icon">
+                        <p>Pellentesque vitae justo elit</p>
+                        <span>500+</span>
+                    </li>
+                    <li class="benefit-box benefit-box--primary">
+                        <img width="20" height="20" src="./assets/imgs/ico/hero_2.svg" alt="Icon">
+                        <p>Pellentesque vitae justo elit</p>
+                        <span>15</span>
+                    </li>
+                    <li class="benefit-box">
+                        <img width="20" height="20" src="./assets/imgs/ico/hero_3.svg" alt="Icon">
+                        <p>Pellentesque vitae justo elit</p>
+                        <span>30</span>
+                    </li>
+                    <li class="benefit-box benefit-box--primary">
+                        <img width="20" height="20" src="./assets/imgs/ico/hero_4.svg" alt="Icon">
+                        <p>Pellentesque vitae justo elit</p>
+                        <span>120</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="hero__partners">
+                <div class="hero__marquee">
+                    <div class="hero__track">
+                        <div class="hero__group">
+                            <img src="./assets/imgs/partners/inter.png" alt="Logo">
+                            <img src="./assets/imgs/partners/toyata.png" alt="Logo">
+                            <img src="./assets/imgs/partners/facebook.png" alt="Logo">
+                            <img src="./assets/imgs/partners/apple.png" alt="Logo">
+                            <img src="./assets/imgs/partners/spot.png" alt="Logo">
+                            <img src="./assets/imgs/partners/ikea.png" alt="Logo">
+                            <img src="./assets/imgs/partners/bmw.png" alt="Logo">
+                            <img src="./assets/imgs/partners/mcdonalds.png" alt="Logo">
+                            <img src="./assets/imgs/partners/google.png" alt="Logo">
+                            <img src="./assets/imgs/partners/gum.png" alt="Logo">
+                        </div>
+                        <div class="hero__group" aria-hidden="true">
+                            <img src="./assets/imgs/partners/inter.png" alt="Logo">
+                            <img src="./assets/imgs/partners/toyata.png" alt="Logo">
+                            <img src="./assets/imgs/partners/facebook.png" alt="Logo">
+                            <img src="./assets/imgs/partners/apple.png" alt="Logo">
+                            <img src="./assets/imgs/partners/spot.png" alt="Logo">
+                            <img src="./assets/imgs/partners/ikea.png" alt="Logo">
+                            <img src="./assets/imgs/partners/bmw.png" alt="Logo">
+                            <img src="./assets/imgs/partners/mcdonalds.png" alt="Logo">
+                            <img src="./assets/imgs/partners/google.png" alt="Logo">
+                            <img src="./assets/imgs/partners/gum.png" alt="Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="text-image">
+            <div class="container">
+                <div class="text-image__report">
+                    <div class="text-image__preview">
+                        <svg class="morph" width="400" height="450" viewBox="0 0 524 515"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <mask class="blobMask">
+                                    <path class="morph__path"
+                                        d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z"
+                                        fill="white" />
+                                </mask>
+                            </defs>
+
+                            <path class="blob-bg"
+                                d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z" />
+
+                            <image href="./assets/imgs/pic.jpg" width="100%" height="100%"
+                                preserveAspectRatio="xMidYMid slice" mask="url(#MASK_ID)" class="blob-image" />
+                        </svg>
+                        <ul class="text-image__stats">
+                            <li>
+                                <img width="20" height="20" loading="lazy" decoding="async" class="text-image__ico"
+                                    src="./assets/imgs/ico/ti_1.svg" alt="Icon">
+                                <p class="text-image__descr">Pellentesque vitae justo elit</p>
+                                <span class="text-image__val">500+</span>
+                            </li>
+                            <li>
+                                <img width="20" height="20" loading="lazy" decoding="async" class="text-image__ico"
+                                    src="./assets/imgs/ico/ti_2.svg" alt="Icon">
+                                <p class="text-image__descr">Pellentesque vitae justo elit</p>
+                                <span class="text-image__val">15</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-image__details">
+                        <div class="text-image__text">
+                            <p>
+                                Aenean facilisis odio leo, id condimentum mauris hendrerit id. Etiam quis quam ac nulla
+                                blandit convallis. In maximus, nunc sit amet ullamcorper aliquet, nibh lorem ultricies
+                                nisi, quis molestie ante sem ut lorem. Vestibulum risus ipsum, rutrum quis felis at,
+                                aliquet lobortis urna. Etiam gravida imperdiet urna, et fringilla sem scelerisque sit
+                                amet. Aliquam in facilisis ipsum. Integer fringilla ornare auctor. Duis nec rhoncus leo.
+                                Fusce eget lorem convallis, viverra augue id, tempus tellus.
+                            </p>
+                            <p>
+                                Fusce diam nisi, mattis eget enim ut, fringilla egestas nisi. Suspendisse vestibulum
+                                congue metus at vestibulum. Nulla finibus lorem sapien, vel imperdiet nunc porttitor
+                                sed. Cras gravida ligula id sem malesuada, vitae hendrerit est egestas. Phasellus
+                                blandit facilisis luctus. Mauris aliquet dolor ipsum, eu dignissim nisi consectetur sit
+                                amet. Nam viverra aliquam purus nec sollicitudin.
+                            </p>
+                            <p>
+                                Nulla pharetra ut justo et sagittis. Suspendisse rutrum, nunc eget ultrices rhoncus,
+                                orci
+                                nibh molestie felis, ac pellentesque turpis felis in velit. Ut pharetra venenatis eros,
+                                et dignissim mi vulputate at. Aliquam vel leo molestie, molestie augue eu, posuere erat.
+                                Quisque ut nisi pellentesque, viverra quam sed, vulputate sapien.
+                            </p>
+                        </div>
+                        <a href="javascript: void(0)" class="action js-action">
+                            Termin Buchen
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="machine">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-head__title">
+                        Fuse tritique ante <span>laoreet euismod</span>
+                    </h2>
+                    <p class="section-head__descr">
+                        Vivamus id est sed tortor molestie suscipit vitae non elit. Nunc efficitur vitae orci
+                        vitae
+                        sagittis.
+                        Nulla ac mattis libero, eget dapibus nibh.
+                    </p>
+                </div>
+                <div class="machine__content js-pin">
+                    <div class="machine__pic js-pin-pic">
+                        <img loading="lazy" decoding="async" src="./assets/imgs/generator.png" alt="Picture">
+                    </div>
+                    <ul class="machine__points js-scrub">
+                        <li>
+                            <img width="20" height="20" loading="lazy" decoding="async"
+                                src="./assets/imgs/ico/machine_1.svg" alt="Icon">
+                            <p>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </p>
+                        </li>
+                        <li>
+                            <img width="20" height="20" loading="lazy" decoding="async"
+                                src="./assets/imgs/ico/machine_2.svg" alt="Icon">
+                            <p>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </p>
+                        </li>
+                        <li>
+                            <img width="20" height="20" loading="lazy" decoding="async"
+                                src="./assets/imgs/ico/machine_3.svg" alt="Icon">
+                            <p>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </p>
+                        </li>
+                        <li>
+                            <img width="20" height="20" loading="lazy" decoding="async"
+                                src="./assets/imgs/ico/machine_4.svg" alt="Icon">
+                            <p>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <a href="javascript: void(0)" class="action action--sm js-action">
+                    Termin Buchen
+                    <span></span>
+                </a>
+            </div>
+        </section>
+        <section class="text-numbers">
+            <div class="container">
+                <div class="text-numbers__report">
+                    <div class="text-numbers__preview">
+                        <svg class="morph" width="400" height="450" viewBox="0 0 524 515"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <mask class="blobMask">
+                                    <path class="morph__path"
+                                        d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z"
+                                        fill="white" />
+                                </mask>
+                            </defs>
+
+                            <path class="blob-bg"
+                                d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z" />
+
+                            <image href="./assets/imgs/pic.jpg" width="100%" height="100%"
+                                preserveAspectRatio="xMidYMid slice" mask="url(#MASK_ID)" class="blob-image" />
+                        </svg>
+                    </div>
+                    <div class="text-numbers__details">
+                        <h2 class="text-numbers__title">
+                            Fuse tritique ante <span>laoreet euismod</span>
+                        </h2>
+                        <div class="text-numbers__descr">
+                            <p>
+                                Aenean facilisis odio leo, id condimentum mauris hendrerit id. Etiam quis quam ac nulla
+                                blandit convallis. In maximus, nunc sit amet ullamcorper aliquet, nibh lorem ultricies
+                                nisi, quis molestie ante sem ut lorem. Vestibulum risus ipsum, rutrum quis felis at,
+                                aliquet lobortis urna. Etiam gravida imperdiet urna, et fringilla sem scelerisque sit
+                                amet. Aliquam in facilisis ipsum. Integer fringilla ornare auctor. Duis nec rhoncus leo.
+                                Fusce eget lorem convallis, viverra augue id, tempus tellus.
+                            </p>
+                            <p>
+                                Fusce diam nisi, mattis eget enim ut, fringilla egestas nisi. Suspendisse vestibulum
+                                congue metus at vestibulum. Nulla finibus lorem sapien, vel imperdiet nunc porttitor
+                                sed. Cras gravida ligula id sem malesuada, vitae hendrerit est egestas. Phasellus
+                                blandit facilisis luctus. Mauris aliquet dolor ipsum, eu dignissim nisi consectetur sit
+                                amet. Nam viverra aliquam purus nec sollicitudin.
+                            </p>
+                            <p>
+                                Nulla pharetra ut justo et sagittis. Suspendisse rutrum, nunc eget ultrices rhoncus,
+                                orci
+                                nibh molestie felis, ac pellentesque turpis felis in velit. Ut pharetra venenatis eros,
+                                et dignissim mi vulputate at. Aliquam vel leo molestie, molestie augue eu, posuere erat.
+                                Quisque ut nisi pellentesque, viverra quam sed, vulputate sapien.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="text-numbers__boxes">
+                    <li class="info-box">
+                        <div class="info-box__head">
+                            <span class="info-box__label">Vestibulum elementum</span>
+                            <span class="info-box__val">10</span>
+                            <p class="info-box__detail">Years with our clients</p>
+                        </div>
+                        <p class="info-box__text">
+                            Maecenas et nulla vehicula, sodales velit quis, iaculis velit. Nam bibendum sagittis sapien,
+                            <span>vitae eleifend ipsum convallis sed.</span>
+                        </p>
+                    </li>
+                    <li class="info-box">
+                        <div class="info-box__head">
+                            <span class="info-box__label">Vestibulum elementum</span>
+                            <span class="info-box__val">1500</span>
+                            <p class="info-box__detail">Projects done</p>
+                        </div>
+                        <p class="info-box__text">
+                            Maecenas et nulla vehicula, sodales velit quis, iaculis velit. Nam bibendum sagittis sapien,
+                            <span>vitae eleifend ipsum convallis sed.</span>
+                        </p>
+                    </li>
+                    <li class="info-box">
+                        <div class="info-box__head">
+                            <span class="info-box__label">Vestibulum elementum</span>
+                            <span class="info-box__val">1500</span>
+                            <p class="info-box__detail">Projects done</p>
+                        </div>
+                        <p class="info-box__text">
+                            Maecenas et nulla vehicula, sodales velit quis, iaculis velit. Nam bibendum sagittis sapien,
+                            <span>vitae eleifend ipsum convallis sed.</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="comparison">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-head__title">
+                        Fuse tritique ante <span>laoreet euismod</span>
+                    </h2>
+                    <p class="section-head__descr">
+                        Vivamus id est sed tortor molestie suscipit vitae non elit. Nunc efficitur vitae orci
+                        vitae
+                        sagittis.
+                        Nulla ac mattis libero, eget dapibus nibh.
+                    </p>
+                </div>
+                <ul class="comparison__list">
+                    <li class="comparison-box">
+                        <div class="comparison-box__info">
+                            <div class="comparison-box__head">
+                                <img src="./assets/imgs/ico/comp_1.svg" width="20" height="20" loading="lazy"
+                                    decoding="async" alt="Icon">
+                                <h3 class="comparison-box__title">
+                                    Aenean tincidunt augue vitae dignissim volutpat
+                                </h3>
+                            </div>
+                            <p class="comparison-box__text">
+                                Etiam quis quam ac nulla blandit convallis. Aliquam in facilisis ipsum. Integer
+                                fringilla ornare auctor. Mauris aliquet dolor ipsum, eu dignissim nisi consectetur sit
+                                amet. Nam viverra aliquam purus nec sollicitudin.
+                            </p>
+                        </div>
+                        <div class="comparison-box__details">
+                            <p class="comparison-box__subtitle">
+                                Problem companies offers:
+                            </p>
+                            <ul class="comparison-box__list">
+                                <li>Etiam quis quam ac nulla blandit convallis.</li>
+                                <li>Mauris ac hendrerit tellus.</li>
+                                <li>Aliquam in facilisis ipsum.</li>
+                                <li>Nulla finibus lorem sapien, imperdiet nunc porttitor.</li>
+                                <li>Mauris ac hendrerit tellus.</li>
+                                <li>Cras gravida ligula id sem, hendrerit est egestas.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="comparison-box comparison-box--primary">
+                        <div class="comparison-box__info">
+                            <div class="comparison-box__head">
+                                <img src="./assets/imgs/ico/comp_2.svg" width="20" height="20" loading="lazy"
+                                    decoding="async" alt="Icon">
+                                <h3 class="comparison-box__title">
+                                    Aenean tincidunt augue vitae dignissim volutpat
+                                </h3>
+                            </div>
+                            <p class="comparison-box__text">
+                                Etiam quis quam ac nulla blandit convallis. Aliquam in facilisis ipsum. Integer
+                                fringilla ornare auctor. Mauris aliquet dolor ipsum, eu dignissim nisi consectetur sit
+                                amet. Nam viverra aliquam purus nec sollicitudin.
+                            </p>
+                        </div>
+                        <div class="comparison-box__details">
+                            <p class="comparison-box__subtitle">
+                                Solution we offer:
+                            </p>
+                            <ul class="comparison-box__list">
+                                <li>Etiam quis quam ac nulla blandit convallis.</li>
+                                <li>Mauris ac hendrerit tellus.</li>
+                                <li>Aliquam in facilisis ipsum.</li>
+                                <li>Nulla finibus lorem sapien, imperdiet nunc porttitor.</li>
+                                <li>Mauris ac hendrerit tellus.</li>
+                                <li>Cras gravida ligula id sem, hendrerit est egestas.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <a href="javascript: void(0)" class="action action--sm js-action">
+                    Termin Buchen
+                    <span></span>
+                </a>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-head__title">
+                        Fuse tritique ante <span>laoreet euismod</span>
+                    </h2>
+                    <p class="section-head__descr">
+                        Vivamus id est sed tortor molestie suscipit vitae non elit. Nunc efficitur vitae orci
+                        vitae
+                        sagittis.
+                        Nulla ac mattis libero, eget dapibus nibh.
+                    </p>
+                </div>
+                <ul class="reviews__list">
+                    <li class="review-box">
+                        <div class="review-box__info">
+                            <div class="review-box__ico">
+                                <img src="./assets/imgs/user_1.png" width="32" height="32" loading="lazy"
+                                    decoding="async" alt="User">
+                            </div>
+                            <p class="review-box__text">
+                                Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit
+                                amet justo sit amet lorem commodo sodales et tempus tortor. Integer varius rutrum
+                                fermentum. In eget ante vitae urna porttitor fringilla. Aliquam gravida tellus vitae leo
+                                dapibus, sed sagittis sapien suscipit. Phasellus viverra massa et aliquam mollis!
+                            </p>
+                        </div>
+                        <div class="review-box__detail">
+                            <p>Marie Jane</p>
+                            <p>CTO at Default Company</p>
+                        </div>
+                    </li>
+                    <li class="review-box review-box--primary">
+                        <div class="review-box__info">
+                            <div class="review-box__ico">
+                                <img src="./assets/imgs/user_2.png" width="32" height="32" loading="lazy"
+                                    decoding="async" alt="User">
+                            </div>
+                            <p class="review-box__text">
+                                Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit
+                                amet justo sit amet lorem commodo sodales et tempus tortor. Integer varius rutrum
+                                fermentum. In eget ante vitae urna porttitor fringilla. Aliquam gravida tellus vitae leo
+                                dapibus, sed sagittis sapien suscipit. Phasellus viverra massa et aliquam mollis!
+                            </p>
+                        </div>
+                        <div class="review-box__detail">
+                            <p>Marie Jane</p>
+                            <p>CTO at Default Company</p>
+                        </div>
+                    </li>
+                    <li class="review-box">
+                        <div class="review-box__info">
+                            <div class="review-box__ico">
+                                <img src="./assets/imgs/user_3.png" width="32" height="32" loading="lazy"
+                                    decoding="async" alt="User">
+                            </div>
+                            <p class="review-box__text">
+                                Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit
+                                amet justo sit amet lorem commodo sodales et tempus tortor. Integer varius rutrum
+                                fermentum. In eget ante vitae urna porttitor fringilla. Aliquam gravida tellus vitae leo
+                                dapibus, sed sagittis sapien suscipit. Phasellus viverra massa et aliquam mollis!
+                            </p>
+                        </div>
+                        <div class="review-box__detail">
+                            <p>Marie Jane</p>
+                            <p>CTO at Default Company</p>
+                        </div>
+                    </li>
+                    <li class="review-box review-box--primary">
+                        <div class="review-box__info">
+                            <div class="review-box__ico">
+                                <img src="./assets/imgs/user_4.png" width="32" height="32" loading="lazy"
+                                    decoding="async" alt="User">
+                            </div>
+                            <p class="review-box__text">
+                                Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit
+                                amet justo sit amet lorem commodo sodales et tempus tortor. Integer varius rutrum
+                                fermentum. In eget ante vitae urna porttitor fringilla. Aliquam gravida tellus vitae leo
+                                dapibus, sed sagittis sapien suscipit. Phasellus viverra massa et aliquam mollis!
+                            </p>
+                        </div>
+                        <div class="review-box__detail">
+                            <p>Marie Jane</p>
+                            <p>CTO at Default Company</p>
+                        </div>
+                    </li>
+                    <li class="review-box">
+                        <div class="review-box__info">
+                            <div class="review-box__ico">
+                                <img src="./assets/imgs/user_5.png" width="32" height="32" loading="lazy"
+                                    decoding="async" alt="User">
+                            </div>
+                            <p class="review-box__text">
+                                Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit
+                                amet justo sit amet lorem commodo sodales et tempus tortor. Integer varius rutrum
+                                fermentum. In eget ante vitae urna porttitor fringilla. Aliquam gravida tellus vitae leo
+                                dapibus, sed sagittis sapien suscipit. Phasellus viverra massa et aliquam mollis!
+                            </p>
+                        </div>
+                        <div class="review-box__detail">
+                            <p>Marie Jane</p>
+                            <p>CTO at Default Company</p>
+                        </div>
+                    </li>
+                    <li class="review-box review-box--primary">
+                        <div class="review-box__info">
+                            <div class="review-box__ico">
+                                <img src="./assets/imgs/user_6.png" width="32" height="32" loading="lazy"
+                                    decoding="async" alt="User">
+                            </div>
+                            <p class="review-box__text">
+                                Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit
+                                amet justo sit amet lorem commodo sodales et tempus tortor. Integer varius rutrum
+                                fermentum. In eget ante vitae urna porttitor fringilla. Aliquam gravida tellus vitae leo
+                                dapibus, sed sagittis sapien suscipit. Phasellus viverra massa et aliquam mollis!
+                            </p>
+                        </div>
+                        <div class="review-box__detail">
+                            <p>Marie Jane</p>
+                            <p>CTO at Default Company</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="javascript: void(0)" class="action action--sm js-action">
+                    Termin Buchen
+                    <span></span>
+                </a>
+            </div>
+        </section>
+        <section class="slider">
+            <div class="container">
+                <div class="slider__content swiper js-slider">
+                    <div class="slider__content-wrapper swiper-wrapper">
+                        <div class="slider__content-slide swiper-slide">
+                            <div class="slider-box">
+                                <svg class="morph" width="400" height="450" viewBox="0 0 524 515"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask class="blobMask">
+                                            <path class="morph__path"
+                                                d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z"
+                                                fill="white" />
+                                        </mask>
+                                    </defs>
+
+                                    <path class="blob-bg"
+                                        d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z" />
+
+                                    <image href="./assets/imgs/pic.jpg" width="100%" height="100%"
+                                        preserveAspectRatio="xMidYMid slice" mask="url(#MASK_ID)" class="blob-image" />
+                                </svg>
+                                <div class="slider-box__info">
+                                    <h3 class="slider-box__title">
+                                        Aenean tincidunt augue <br> <span>vitae dignissim volutpat</span>
+                                    </h3>
+                                    <div class="slider-box__text">
+                                        <p>
+                                            Aliquam in facilisis ipsum. Integer fringilla ornare auctor. Duis nec
+                                            rhoncus leo. Fusce eget lorem convallis, <span>viverra augue id, tempus
+                                                tellus.</span> Fusce diam nisi, mattis eget enim ut, fringilla egestas
+                                            nisi. Suspendisse vestibulum congue metus at vestibulum. <span>Nulla finibus
+                                                lorem sapien,</span> vel imperdiet nunc porttitor sed. <span>Cras
+                                                gravida ligula id sem</span> malesuada, vitae hendrerit est egestas.
+                                            Phasellus blandit facilisis luctus.
+                                        </p>
+                                        <p>
+                                            Maecenas et nulla vehicula, sodales velit quis, iaculis velit. Nam bibendum
+                                            sagittis sapien, <span>vitae eleifend ipsum convallis sed.</span>
+                                        </p>
+                                    </div>
+                                    <ul class="slider-box__list">
+                                        <li class="slider-box__point">
+                                            <img src="./assets/imgs/ico/ico-flash.svg" alt="Icon" width="20" height="20"
+                                                loading="lazy" decoding="async" class="slider-box__ico">
+                                            <p class="slider-box__detail">
+                                                More leads
+                                            </p>
+                                            <span class="slider-box__val">25+</span>
+                                        </li>
+                                        <li class="slider-box__point">
+                                            <img src="./assets/imgs/ico/ico-users.svg" alt="Icon" width="20" height="20"
+                                                loading="lazy" decoding="async" class="slider-box__ico">
+                                            <p class="slider-box__detail">
+                                                New clients
+                                            </p>
+                                            <span class="slider-box__val">12+</span>
+                                        </li>
+                                        <li class="slider-box__point">
+                                            <img src="./assets/imgs/ico/ico-battery.svg" alt="Icon" width="20"
+                                                height="20" loading="lazy" decoding="async" class="slider-box__ico">
+                                            <p class="slider-box__detail">
+                                                Hours saved
+                                            </p>
+                                            <span class="slider-box__val">10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider__content-slide swiper-slide">
+                            <div class="slider-box">
+                                <svg class="morph" width="400" height="450" viewBox="0 0 524 515"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <mask class="blobMask">
+                                            <path class="morph__path"
+                                                d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z"
+                                                fill="white" />
+                                        </mask>
+                                    </defs>
+
+                                    <path class="blob-bg"
+                                        d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z" />
+
+                                    <image href="./assets/imgs/pic.jpg" width="100%" height="100%"
+                                        preserveAspectRatio="xMidYMid slice" mask="url(#MASK_ID)" class="blob-image" />
+                                </svg>
+                                <div class="slider-box__info">
+                                    <h3 class="slider-box__title">
+                                        Aenean tincidunt augue <br> <span>vitae dignissim volutpat</span>
+                                    </h3>
+                                    <div class="slider-box__text">
+                                        <p>
+                                            Aliquam in facilisis ipsum. Integer fringilla ornare auctor. Duis nec
+                                            rhoncus leo. Fusce eget lorem convallis, <span>viverra augue id, tempus
+                                                tellus.</span> Fusce diam nisi, mattis eget enim ut, fringilla egestas
+                                            nisi. Suspendisse vestibulum congue metus at vestibulum. <span>Nulla finibus
+                                                lorem sapien,</span> vel imperdiet nunc porttitor sed. <span>Cras
+                                                gravida ligula id sem</span> malesuada, vitae hendrerit est egestas.
+                                            Phasellus blandit facilisis luctus.
+                                        </p>
+                                        <p>
+                                            Maecenas et nulla vehicula, sodales velit quis, iaculis velit. Nam bibendum
+                                            sagittis sapien, <span>vitae eleifend ipsum convallis sed.</span>
+                                        </p>
+                                    </div>
+                                    <ul class="slider-box__list">
+                                        <li class="slider-box__point">
+                                            <img src="./assets/imgs/ico/ico-flash.svg" alt="Icon" width="20" height="20"
+                                                loading="lazy" decoding="async" class="slider-box__ico">
+                                            <p class="slider-box__detail">
+                                                More leads
+                                            </p>
+                                            <span class="slider-box__val">25+</span>
+                                        </li>
+                                        <li class="slider-box__point">
+                                            <img src="./assets/imgs/ico/ico-users.svg" alt="Icon" width="20" height="20"
+                                                loading="lazy" decoding="async" class="slider-box__ico">
+                                            <p class="slider-box__detail">
+                                                New clients
+                                            </p>
+                                            <span class="slider-box__val">12+</span>
+                                        </li>
+                                        <li class="slider-box__point">
+                                            <img src="./assets/imgs/ico/ico-battery.svg" alt="Icon" width="20"
+                                                height="20" loading="lazy" decoding="async" class="slider-box__ico">
+                                            <p class="slider-box__detail">
+                                                Hours saved
+                                            </p>
+                                            <span class="slider-box__val">10</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__nav">
+                    <button type="button" class="slider__btn js-slider-prev">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9998 29.3337H19.9998C26.6665 29.3337 29.3332 26.667 29.3332 20.0003V12.0003C29.3332 5.33366 26.6665 2.66699 19.9998 2.66699H11.9998C5.33317 2.66699 2.6665 5.33366 2.6665 12.0003V20.0003C2.6665 26.667 5.33317 29.3337 11.9998 29.3337Z"
+                                stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17.6802 20.7063L12.9868 15.9996L17.6802 11.293" stroke="#1A1A1A"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button type="button" class="slider__btn js-slider-next">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9998 29.3337H19.9998C26.6665 29.3337 29.3332 26.667 29.3332 20.0003V12.0003C29.3332 5.33366 26.6665 2.66699 19.9998 2.66699H11.9998C5.33317 2.66699 2.6665 5.33366 2.6665 12.0003V20.0003C2.6665 26.667 5.33317 29.3337 11.9998 29.3337Z"
+                                stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M17.6802 20.7063L12.9868 15.9996L17.6802 11.293" stroke="#1A1A1A"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="case-studies">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-head__title">
+                        Fuse tritique ante <span>laoreet euismod</span>
+                    </h2>
+                    <p class="section-head__descr">
+                        Vivamus id est sed tortor molestie suscipit vitae non elit. Nunc efficitur vitae orci
+                        vitae
+                        sagittis.
+                        Nulla ac mattis libero, eget dapibus nibh.
+                    </p>
+                </div>
+                <ul class="case-studies__list">
+                    <li class="study-box study-box--primary">
+                        <img width="20" height="20" loading="lazy" decoding="async" src="./assets/imgs/ico/study-2.svg"
+                            alt="Icon" class="study-box__ico">
+                        <h3 class="study-box__title">Aenean tincidunt augue vitae</h3>
+                        <p class="study-box__text">
+                            Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit amet
+                            justo sit amet lorem commodo sodales et tempus tortor.
+                        </p>
+                        <ul class="study-box__list">
+                            <li>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </li>
+                            <li>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </li>
+                            <li>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </li>
+                        </ul>
+                        <p class="study-box__text">
+                            Phasellus sit amet justo sit amet lorem commodo sodales et tempus tortor.
+                        </p>
+                    </li>
+                    <li class="study-box">
+                        <img width="20" height="20" loading="lazy" decoding="async" src="./assets/imgs/ico/study-3.svg"
+                            alt="Icon" class="study-box__ico">
+                        <h3 class="study-box__title">Aenean tincidunt augue vitae</h3>
+                        <p class="study-box__text">
+                            Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit amet
+                            justo sit amet lorem commodo sodales et tempus tortor.
+                        </p>
+                        <ul class="study-box__list">
+                            <li>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </li>
+                            <li>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </li>
+                            <li>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </li>
+                        </ul>
+                        <p class="study-box__text">
+                            Phasellus sit amet justo sit amet lorem commodo sodales et tempus tortor.
+                        </p>
+                    </li>
+                    <li class="study-box study-box--primary">
+                        <img width="20" height="20" loading="lazy" decoding="async" src="./assets/imgs/ico/study-2.svg"
+                            alt="Icon" class="study-box__ico">
+                        <h3 class="study-box__title">Aenean tincidunt augue vitae</h3>
+                        <p class="study-box__text">
+                            Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit amet
+                            justo sit amet lorem commodo sodales et tempus tortor.
+                        </p>
+                        <ul class="study-box__list">
+                            <li>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </li>
+                            <li>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </li>
+                            <li>
+                                In iaculis interdum elit phasellus sit amet justo sit amet
+                                <span>lorem commodo sodales et tempus tortor.</span>
+                            </li>
+                        </ul>
+                        <p class="study-box__text">
+                            Phasellus sit amet justo sit amet lorem commodo sodales et tempus tortor.
+                        </p>
+                    </li>
+                </ul>
+                <a href="javascript: void(0)" class="action action--sm js-action">
+                    Termin Buchen
+                    <span></span>
+                </a>
+            </div>
+        </section>
+        <section class="columns">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-head__title">
+                        Fuse tritique ante <span>laoreet euismod</span>
+                    </h2>
+                    <p class="section-head__descr">
+                        Vivamus id est sed tortor molestie suscipit vitae non elit. Nunc efficitur vitae orci
+                        vitae
+                        sagittis.
+                        Nulla ac mattis libero, eget dapibus nibh.
+                    </p>
+                </div>
+                <div class="columns__report">
+                    <div class="columns__preview">
+                        <svg class="morph" width="400" height="450" viewBox="0 0 524 515"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <mask class="blobMask">
+                                    <path class="morph__path"
+                                        d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z"
+                                        fill="white" />
+                                </mask>
+                            </defs>
+
+                            <path class="blob-bg"
+                                d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z" />
+
+                            <image href="./assets/imgs/pic.jpg" width="100%" height="100%"
+                                preserveAspectRatio="xMidYMid slice" mask="url(#MASK_ID)" class="blob-image" />
+                        </svg>
+                    </div>
+                    <div class="columns__details">
+                        <div class="columns__text">
+                            <p>
+                                Aenean facilisis odio leo, id condimentum mauris hendrerit id. Etiam quis quam ac nulla
+                                blandit convallis. In maximus, nunc sit amet ullamcorper aliquet, nibh lorem ultricies
+                                nisi, quis molestie ante sem ut lorem. Vestibulum risus ipsum, rutrum quis felis at,
+                                aliquet lobortis urna. Etiam gravida imperdiet urna, et fringilla sem scelerisque sit
+                                amet. Aliquam in facilisis ipsum. Integer fringilla ornare auctor. Duis nec rhoncus leo.
+                                Fusce eget lorem convallis, viverra augue id, tempus tellus.
+                            </p>
+                            <p>
+                                Fusce diam nisi, mattis eget enim ut, fringilla egestas nisi. Suspendisse vestibulum
+                                congue metus at vestibulum. Nulla finibus lorem sapien, vel imperdiet nunc porttitor
+                                sed. Cras gravida ligula id sem malesuada, vitae hendrerit est egestas. Phasellus
+                                blandit facilisis luctus. Mauris aliquet dolor ipsum, eu dignissim nisi consectetur sit
+                                amet. Nam viverra aliquam purus nec sollicitudin.
+                            </p>
+                            <p>
+                                Nulla pharetra ut justo et sagittis. Suspendisse rutrum, nunc eget ultrices rhoncus,
+                                orci
+                                nibh molestie felis, ac pellentesque turpis felis in velit. Ut pharetra venenatis eros,
+                                et dignissim mi vulputate at. Aliquam vel leo molestie, molestie augue eu, posuere erat.
+                                Quisque ut nisi pellentesque, viverra quam sed, vulputate sapien.
+                            </p>
+                        </div>
+                        <a href="javascript: void(0)" class="action js-action">
+                            Termin Buchen
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <ul class="columns__boxes">
+                    <li class="info-box">
+                        <div class="info-box__head">
+                            <img src="./assets/imgs/ico/ico-flash.svg" decoding="async" width="20" height="20"
+                                loading="lazy" alt="Icon" class="info-box__ico">
+                            <p class="info-box__detail">Years with our clients</p>
+                            <span class="info-box__val">10</span>
+                        </div>
+                        <p class="info-box__text">
+                            Maecenas et nulla vehicula, sodales velit quis, iaculis velit. Nam bibendum sagittis sapien,
+                            <span>vitae eleifend ipsum convallis sed.</span>
+                        </p>
+                    </li>
+                    <li class="info-box">
+                        <div class="info-box__head">
+                            <img src="./assets/imgs/ico/ico-users.svg" decoding="async" width="20" height="20"
+                                loading="lazy" alt="Icon" class="info-box__ico">
+                            <p class="info-box__detail">Projects done</p>
+                            <span class="info-box__val">1500</span>
+                        </div>
+                        <p class="info-box__text">
+                            Maecenas et nulla vehicula, sodales velit quis, iaculis velit. Nam bibendum sagittis sapien,
+                            <span>vitae eleifend ipsum convallis sed.</span>
+                        </p>
+                    </li>
+                    <li class="info-box">
+                        <div class="info-box__head">
+                            <img src="./assets/imgs/ico/ico-battery.svg" decoding="async" width="20" height="20"
+                                loading="lazy" alt="Icon" class="info-box__ico">
+                            <p class="info-box__detail">Projects done</p>
+                            <span class="info-box__val">1500</span>
+                        </div>
+                        <p class="info-box__text">
+                            Maecenas et nulla vehicula, sodales velit quis, iaculis velit. Nam bibendum sagittis sapien,
+                            <span>vitae eleifend ipsum convallis sed.</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="team">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-head__title">
+                        Fuse tritique ante <span>laoreet euismod</span>
+                    </h2>
+                    <p class="section-head__descr">
+                        Vivamus id est sed tortor molestie suscipit vitae non elit. Nunc efficitur vitae orci
+                        vitae
+                        sagittis.
+                        Nulla ac mattis libero, eget dapibus nibh.
+                    </p>
+                </div>
+                <ul class="team__list">
+                    <li class="team__box">
+                        <svg class="morph" width="400" height="450" viewBox="0 0 524 515"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <mask class="blobMask">
+                                    <path class="morph__path"
+                                        d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z"
+                                        fill="white" />
+                                </mask>
+                            </defs>
+
+                            <path class="blob-bg"
+                                d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z" />
+
+                            <image href="./assets/imgs/pic.jpg" width="100%" height="100%"
+                                preserveAspectRatio="xMidYMid slice" mask="url(#MASK_ID)" class="blob-image" />
+                        </svg>
+                        <div class="team__info">
+                            <p class="team__descr">
+                                Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit
+                                amet justo sit amet lorem commodo sodales et tempus tortor. Integer varius rutrum
+                                fermentum. In eget ante vitae urna porttitor fringilla. Aliquam gravida tellus vitae leo
+                                dapibus, sed sagittis sapien suscipit. Phasellus viverra massa et aliquam mollis!
+                            </p>
+                            <div class="team__detail">
+                                <p>John Doe</p>
+                                <p>CTO at Default Company</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team__box">
+                        <svg class="morph" width="400" height="450" viewBox="0 0 524 515"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <mask class="blobMask">
+                                    <path class="morph__path"
+                                        d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z"
+                                        fill="white" />
+                                </mask>
+                            </defs>
+
+                            <path class="blob-bg"
+                                d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z" />
+
+                            <image href="./assets/imgs/pic.jpg" width="100%" height="100%"
+                                preserveAspectRatio="xMidYMid slice" mask="url(#MASK_ID)" class="blob-image" />
+                        </svg>
+                        <div class="team__info">
+                            <p class="team__descr">
+                                Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit
+                                amet justo sit amet lorem commodo sodales et tempus tortor. Integer varius rutrum
+                                fermentum. In eget ante vitae urna porttitor fringilla. Aliquam gravida tellus vitae leo
+                                dapibus, sed sagittis sapien suscipit. Phasellus viverra massa et aliquam mollis!
+                            </p>
+                            <div class="team__detail">
+                                <p>John Doe</p>
+                                <p>CTO at Default Company</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team__box">
+                        <svg class="morph" width="400" height="450" viewBox="0 0 524 515"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <mask class="blobMask">
+                                    <path class="morph__path"
+                                        d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z"
+                                        fill="white" />
+                                </mask>
+                            </defs>
+
+                            <path class="blob-bg"
+                                d="M471.358 341.303C439.527 392.759 382.134 413.939 327.998 440.92C266.231 471.703 201.608 537.414 139.957 506.468C78.1975 475.468 104.148 380.94 79.689 316.28C56.36 254.608 -13.385 206.547 2.26563 142.47C18.789 74.8197 88.4321 33.6949 154.247 11.024C216.647 -10.4705 282.081 2.36947 344.163 24.6986C411.143 48.7895 487.364 74.3097 513.91 140.385C540.43 206.398 508.798 280.78 471.358 341.303Z" />
+
+                            <image href="./assets/imgs/pic.jpg" width="100%" height="100%"
+                                preserveAspectRatio="xMidYMid slice" mask="url(#MASK_ID)" class="blob-image" />
+                        </svg>
+                        <div class="team__info">
+                            <p class="team__descr">
+                                Nunc faucibus interdum ipsum finibus vehicula. In iaculis interdum elit. Phasellus sit
+                                amet justo sit amet lorem commodo sodales et tempus tortor. Integer varius rutrum
+                                fermentum. In eget ante vitae urna porttitor fringilla. Aliquam gravida tellus vitae leo
+                                dapibus, sed sagittis sapien suscipit. Phasellus viverra massa et aliquam mollis!
+                            </p>
+                            <div class="team__detail">
+                                <p>John Doe</p>
+                                <p>CTO at Default Company</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="cta">
+            <div class="container">
+                <div class="cta__box">
+                    <div class="cta__content">
+                        <div class="section-head">
+                            <h2 class="section-head__title">
+                                Fuse tritique ante <span>laoreet euismod</span>
+                            </h2>
+                            <p class="section-head__descr">
+                                Vivamus id est sed tortor molestie suscipit vitae non elit. Nunc efficitur vitae orci
+                                vitae
+                                sagittis.
+                                Nulla ac mattis libero, eget dapibus nibh.
+                            </p>
+                        </div>
+                        <a href="javascript: void(0)" class="action action--sm js-action">
+                            Termin Buchen
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-head__title">
+                        Fuse tritique ante <span>laoreet euismod</span>
+                    </h2>
+                    <p class="section-head__descr">
+                        Vivamus id est sed tortor molestie suscipit vitae non elit. Nunc efficitur vitae orci vitae
+                        sagittis.
+                        Nulla ac mattis libero, eget dapibus nibh.
+                    </p>
+                </div>
+                <ul class="faq__list">
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__head">
+                            <h3 class="faq__title">
+                                Nunc ultrices sit lobortis tellus sit amet massa congue eleifend amet risus
+                                vitae iaculis?
+                            </h3>
+                            <div class="faq__plus"></div>
+                        </div>
+                        <div class="faq__inner">
+                            <p class="faq__text">
+                                Morbi ullamcorper erat mauris, a rutrum dui condimentum vitae. Morbi
+                                sollicitudin ipsum turpis, nec posuere justo semper et. Aenean orci massa,
+                                tristique vel ornare quis, bibendum a lectus. Pellentesque sed urna non arcu
+                                bibendum malesuada vitae vitae augue.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__head">
+                            <h3 class="faq__title">
+                                Nunc ultrices sit lobortis tellus sit amet massa congue eleifend amet risus
+                                vitae iaculis?
+                            </h3>
+                            <div class="faq__plus"></div>
+                        </div>
+                        <div class="faq__inner">
+                            <p class="faq__text">
+                                Morbi ullamcorper erat mauris, a rutrum dui condimentum vitae. Morbi
+                                sollicitudin ipsum turpis, nec posuere justo semper et. Aenean orci massa,
+                                tristique vel ornare quis, bibendum a lectus. Pellentesque sed urna non arcu
+                                bibendum malesuada vitae vitae augue.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__head">
+                            <h3 class="faq__title">
+                                Nunc ultrices sit lobortis tellus sit amet massa congue eleifend amet risus
+                                vitae iaculis?
+                            </h3>
+                            <div class="faq__plus"></div>
+                        </div>
+                        <div class="faq__inner">
+                            <p class="faq__text">
+                                Morbi ullamcorper erat mauris, a rutrum dui condimentum vitae. Morbi
+                                sollicitudin ipsum turpis, nec posuere justo semper et. Aenean orci massa,
+                                tristique vel ornare quis, bibendum a lectus. Pellentesque sed urna non arcu
+                                bibendum malesuada vitae vitae augue.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__head">
+                            <h3 class="faq__title">
+                                Nunc ultrices sit lobortis tellus sit amet massa congue eleifend amet risus
+                                vitae iaculis?
+                            </h3>
+                            <div class="faq__plus"></div>
+                        </div>
+                        <div class="faq__inner">
+                            <p class="faq__text">
+                                Morbi ullamcorper erat mauris, a rutrum dui condimentum vitae. Morbi
+                                sollicitudin ipsum turpis, nec posuere justo semper et. Aenean orci massa,
+                                tristique vel ornare quis, bibendum a lectus. Pellentesque sed urna non arcu
+                                bibendum malesuada vitae vitae augue.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__head">
+                            <h3 class="faq__title">
+                                Nunc ultrices sit lobortis tellus sit amet massa congue eleifend amet risus
+                                vitae iaculis?
+                            </h3>
+                            <div class="faq__plus"></div>
+                        </div>
+                        <div class="faq__inner">
+                            <p class="faq__text">
+                                Morbi ullamcorper erat mauris, a rutrum dui condimentum vitae. Morbi
+                                sollicitudin ipsum turpis, nec posuere justo semper et. Aenean orci massa,
+                                tristique vel ornare quis, bibendum a lectus. Pellentesque sed urna non arcu
+                                bibendum malesuada vitae vitae augue.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq__item js-faq-box">
+                        <div class="faq__head">
+                            <h3 class="faq__title">
+                                Nunc ultrices sit lobortis tellus sit amet massa congue eleifend amet risus
+                                vitae iaculis?
+                            </h3>
+                            <div class="faq__plus"></div>
+                        </div>
+                        <div class="faq__inner">
+                            <p class="faq__text">
+                                Morbi ullamcorper erat mauris, a rutrum dui condimentum vitae. Morbi
+                                sollicitudin ipsum turpis, nec posuere justo semper et. Aenean orci massa,
+                                tristique vel ornare quis, bibendum a lectus. Pellentesque sed urna non arcu
+                                bibendum malesuada vitae vitae augue.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="javascript: void(0)" class="action action--sm js-action">
+                    Termin Buchen
+                    <span></span>
+                </a>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
         <div class="container">
             <div class="footer__top">
@@ -152,12 +1313,17 @@
                     </li>
                 </ul>
             </nav>
-            <a href="javascript: void(0)" class="mobile-menu__link cta js-cta">
+            <a href="javascript: void(0)" class="mobile-menu__link action js-action">
                 Termin Buchen
                 <span></span>
             </a>
         </div>
     </div>
+    <script src="./assets/libs/gsap/gsap.min.js"></script>
+    <script src="./assets/libs/gsap/morphSVG.min.js"></script>
+    <script src="./assets/libs/gsap/ScrollTrigger.min.js"></script>
+    <script src="./assets/libs/gsap/SplitText.min.js"></script>
+    <script src="./assets/libs/swiper/swiper.min.js"></script>
     <script defer type="module" src="./assets/js/main.js"></script>
 </body>
 

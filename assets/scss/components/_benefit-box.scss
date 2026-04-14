@@ -1,0 +1,54 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.benefit-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: rem(8px);
+    padding: rem(16px);
+    border-radius: rem(20px) 0 rem(20px) 0;
+    background: $c_drk;
+    color: $c_wht;
+
+    @include media('laptop_above') {
+        text-align: left;
+        align-items: flex-start;
+        padding: rem(32px);
+        border-radius: rem(40px) 0 rem(40px) 0;
+    }
+
+    &--primary {
+        background: $c_pink;
+    }
+
+    img {
+        width: rem(20px);
+        height: rem(20px);
+        @include media('tablet_above') {
+            width: rem(40px);
+            height: rem(40px);
+        }
+    }
+
+    p {
+        margin: 0;
+        font: 400 #{rem(14px)} / 150% $ff;
+        @include media('tablet_above') {
+            font-size: rem(16px);
+        }
+    }
+
+    span {
+        font: 700 #{rem(32px)} / 100% $ff;
+        @include media('tablet_above') {
+            font-size: rem(48px);
+        }
+
+        @include media('laptop_above') {
+            font-size: rem(64px);
+        }
+    }
+}

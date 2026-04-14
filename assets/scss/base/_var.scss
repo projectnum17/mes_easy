@@ -17,6 +17,12 @@ $c_wht: #ffffff;
 
 @include media('tablet_above') {
     :root {
+        --section_indent: #{rem(96px)};
+    }
+}
+
+@include media('laptop_above') {
+    :root {
         --section_indent: #{rem(128px)};
     }
 }

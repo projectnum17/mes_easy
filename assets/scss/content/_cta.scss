@@ -1,0 +1,77 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.cta {
+    .container {
+        padding: 0;
+        @include media('tablet_above') {
+            padding-inline: $container_pdd;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        max-width: rem(612px);
+        margin: 0 auto;
+        padding-inline: $container_pdd;
+        padding-block: rem(60px);
+        @include media('tablet_above') {
+            padding-block: rem(120px);
+        }
+    }
+
+    &__box {
+        position: relative;
+        overflow: hidden;
+        background: #f8edf4;
+
+        @include media('tablet_above') {
+            border-radius: rem(20px) 0 rem(20px) 0;
+        }
+
+        @include media('laptop_above') {
+            border-radius: rem(40px) 0 rem(40px) 0;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            top: -25%;
+            left: -25%;
+            z-index: 1;
+            background:
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(255, 180, 210, 0.6),
+                    transparent 40%
+                ),
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(180, 200, 255, 0.6),
+                    transparent 40%
+                );
+            filter: blur(60px);
+            animation: rotateMesh 5s linear infinite;
+        }
+
+        &::after {
+            animation-direction: reverse;
+            animation-duration: 15s;
+            opacity: 0.5;
+        }
+    }
+
+    @keyframes rotateMesh {
+        from {
+            transform: rotate(0deg) scale(1);
+        }
+        to {
+            transform: rotate(360deg) scale(1.1);
+        }
+    }
+}

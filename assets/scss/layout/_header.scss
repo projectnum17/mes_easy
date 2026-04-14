@@ -5,9 +5,27 @@
 .header {
     position: fixed;
     top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 100%;
     z-index: 10;
-    padding-inline: calc($container_pdd / 2);
+    padding-inline: $container_pdd;
+    max-width: $container_wdth;
+    background: $c_wht;
+    @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
+    &.is-scrolled {
+        .header__panel {
+            margin-top: rem(8px);
+
+            @include media('laptop_above') {
+                margin-top: rem(20px);
+            }
+        }
+    }
+
+    &.is-transform {
+        transform: translate(-50%, -100%);
+    }
 
     .container {
         display: flex;
@@ -22,7 +40,8 @@
         }
     }
 
-    .cta {
+    .action {
+        margin: 0 ;
         display: none;
         @include media('tablet_above') {
             display: inline-flex;
@@ -31,9 +50,13 @@
 
     &__panel {
         margin-top: rem(12px);
+        margin-bottom: rem(12px);
         border-radius: rem(8px) 0 rem(8px) 0;
         box-shadow: 0px -2px 10px 0px #0000001f;
+        @include transitions(0.5s, cubic-bezier(0.768, 0.304, 0.496, 0.884));
         @include media('laptop_above') {
+            margin-top: rem(48px);
+            margin-bottom: 0;
             border-radius: rem(20px) 0 rem(20px) 0;
         }
     }

@@ -1,5 +1,5 @@
 const ctaHoverHandler = () => {
-    const cta = document.querySelectorAll('.js-cta');
+    const cta = document.querySelectorAll('.js-action');
 
     if (!cta.length) return;
 

@@ -22,10 +22,6 @@ body {
 
 main {
     flex: 1;
-    padding-top: rem(140px);
-    @include media('laptop_above') {
-        padding-top: rem(280px);
-    }
 }
 
 footer {
@@ -40,6 +36,10 @@ button {
 
 a {
     @include reset_link;
+}
+
+section {
+    margin-bottom: var(--section_indent);
 }
 
 .container {

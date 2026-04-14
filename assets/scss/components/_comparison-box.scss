@@ -1,0 +1,113 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.comparison-box {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+    padding: rem(28px) rem(20px);
+    border-radius: rem(20px) 0 rem(20px) 0;
+    border: 1px solid #1a1a1a33;
+    @include media('laptop_above') {
+        padding: rem(55px) rem(39px);
+        border-radius: rem(40px) 0 rem(40px) 0;
+        gap: rem(40px);
+    }
+
+    &__head {
+        margin-bottom: rem(12px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(8px);
+
+        @include media('laptop_above') {
+            flex-direction: row;
+            align-items: center;
+            gap: rem(16px);
+            margin-bottom: rem(16px);
+        }
+
+        img {
+            width: rem(20px);
+            height: rem(20px);
+            flex-shrink: 0;
+            @include media('laptop_above') {
+                width: rem(40px);
+                height: rem(40px);
+            }
+        }
+    }
+
+    &__title {
+        font: 700 #{rem(24px)} / 140% $ff;
+        text-transform: capitalize;
+        @include media('laptop_above') {
+            font-size: rem(32px);
+        }
+    }
+
+    &__text {
+        font: 400 #{rem(14px)} / 150% $ff;
+        color: $c_drk_hlf;
+        @include media('laptop_above') {
+            font-size: rem(16px);
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: rem(8px);
+        font: 700 #{rem(14px)} / 150% $ff;
+        @include media('laptop_above') {
+            font-size: rem(16px);
+            margin-bottom: rem(16px);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8px);
+        @include media('laptop_above') {
+            gap: rem(16px);
+        }
+
+        li {
+            font: 400 #{rem(14px)} / 150% $ff;
+            display: inline-flex;
+            align-items: center;
+            gap: rem(8px);
+            color: #ffffffb2;
+            @include media('laptop_above') {
+                font-size: rem(16px);
+            }
+
+            &::before {
+                content: '';
+                width: rem(16px);
+                height: rem(16px);
+                flex-shrink: 0;
+                background: url('../imgs/ico/ico-arrow.svg') no-repeat center
+                    center / cover;
+            }
+        }
+    }
+
+    &__details {
+        padding: rem(12px);
+        border-radius: rem(20px) 0 rem(20px) 0;
+        border: 1px solid #1a1a1a33;
+        background: $c_drk;
+        color: $c_wht;
+        @include media('laptop_above') {
+            padding: rem(23px);
+            border-radius: rem(40px) 0 rem(40px) 0;
+        }
+    }
+
+    &--primary {
+        .comparison-box__details {
+            background: $c_pink;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.reviews {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12px);
+        margin-bottom: var(--section_indent);
+        @include media('tablet_above') {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include media('laptop_above') {
+            gap: rem(40px) rem(24px);
+        }
+    }
+}

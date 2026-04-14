@@ -1,0 +1,103 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.text-numbers {
+    &__boxes {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24px);
+
+        @include media('tablet_above') {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__report {
+        margin-bottom: var(--section_indent);
+        @include media('tablet_above') {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: rem(24px);
+        }
+        @include media('laptop_above') {
+            gap: rem(65px);
+        }
+    }
+
+    &__preview {
+        max-width: rem(400px);
+        margin: 0 auto rem(24px);
+        width: 100%;
+        @include media('tablet_above') {
+            margin: 0;
+            flex: 1;
+            max-width: 100%;
+        }
+        @include media('laptop_above') {
+            max-width: rem(571px);
+        }
+    }
+
+    &__details {
+        @include media('tablet_above') {
+            max-width: rem(500px);
+        }
+        @include media('laptop_above') {
+            max-width: rem(611px);
+        }
+    }
+
+    &__title {
+        font: 700 #{rem(32px)} / 110% $ff;
+        text-transform: capitalize;
+        margin-bottom: rem(16px);
+
+        @include media('tablet_above') {
+            font-size: rem(48px);
+            margin-bottom: rem(32px);
+        }
+
+        @include media('laptop_above') {
+            font-size: rem(64px);
+        }
+
+        span {
+            color: $c_pink;
+        }
+    }
+
+    &__descr {
+        margin-bottom: rem(24px);
+        @include media('laptop_above') {
+            margin-bottom: rem(48px);
+        }
+
+        p {
+            font: 400 #{rem(14px)} / 170% $ff;
+            color: $c_drk_hlf;
+            @include media('laptop_above') {
+                font-size: rem(16px);
+            }
+
+            &:not(:last-child) {
+                margin-bottom: rem(12px);
+                @include media('laptop_above') {
+                    margin-bottom: rem(24px);
+                }
+            }
+        }
+    }
+
+    .action {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .morph {
+        width: 100%;
+        height: auto;
+    }
+}

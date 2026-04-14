@@ -1,0 +1,18 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+@use '../../base/var' as *;
+
+.morph {
+    color: #fff;
+    .cover {
+        width: 100%;
+        height: 100%;
+    }
+    .blob-bg {
+        fill: $c_pink;
+    }
+
+    .blob-image {
+        transform: translateY(#{rem(-15px)});
+    }
+}

@@ -2,7 +2,7 @@
 @use '../../base/mixins' as *;
 @use '../../base/var' as *;
 
-.cta {
+.action {
     font: 500 #{rem(14px)} / 150% $ff;
     overflow: hidden;
     position: relative;
@@ -29,6 +29,9 @@
     }
 
     @include media('tablet_above') {
+        &:not(.action--sm) {
+            padding: rem(16px);
+        }
         font-size: rem(16px);
         border-radius: rem(20px) 0 rem(20px) 0;
     }
@@ -45,5 +48,11 @@
         transform: translate(-50%, -50%);
         z-index: -1;
         background: $c_wht;
+    }
+
+    &--sm {
+        display: flex;
+        width: max-content;
+        margin: 0 auto;
     }
 }

@@ -1,0 +1,337 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+
+.hero {
+    padding-top: rem(140px);
+    margin-bottom: 0;
+    padding-bottom: var(--section_indent);
+    overflow: hidden;
+
+    @include media('laptop_above') {
+        padding-top: rem(280px);
+    }
+
+    &__pic {
+        z-index: 3;
+        position: absolute;
+        left: 50%;
+        bottom: calc(var(--section_indent) * -1);
+        width: 100%;
+        transform: translateX(-50%);
+        @include media('tablet_above') {
+            bottom: 0;
+        }
+
+        &::after {
+            display: none;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0) 61.54%,
+                #ffffff 95.67%
+            );
+
+            @include media('tablet_above') {
+                display: block;
+            }
+        }
+    }
+
+    &__steps {
+        max-width: rem(1100px);
+        margin: 0 auto;
+        position: relative;
+
+        @include media('tablet_above') {
+            padding-block: rem(100px);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            background:
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(255, 180, 210, 0.6),
+                    transparent 40%
+                ),
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(180, 200, 255, 0.6),
+                    transparent 40%
+                );
+
+            filter: blur(60px);
+            border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+            animation: blobMove 15s ease-in-out infinite alternate;
+        }
+
+        &::after {
+            animation-direction: reverse;
+            animation-duration: 5s;
+        }
+
+        @keyframes blobMove {
+            0% {
+                border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+                transform: translate(-50%, -50%) rotate(0deg) scale(1);
+            }
+
+            50% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+                transform: translate(-50%, -50%) rotate(180deg) scale(1.1);
+            }
+
+            100% {
+                border-radius: 30% 70% 40% 60% / 50% 60% 40% 50%;
+                transform: translate(-50%, -50%) rotate(360deg) scale(1);
+            }
+        }
+    }
+
+    &__list {
+        position: relative;
+        z-index: 5;
+        padding-inline: rem(12px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(20px);
+
+        @include media('tablet_above') {
+            padding-inline: rem(30px);
+        }
+
+        &:nth-child(1) {
+            margin-bottom: rem(20px);
+            @include media('tablet_above') {
+                margin-bottom: rem(80px);
+            }
+        }
+
+        &:nth-child(2) {
+            padding: 0;
+            max-width: rem(640px);
+            margin: 0 auto rem(20px);
+            justify-content: space-evenly;
+            @include media('tablet_above') {
+                margin: 0 auto rem(40px);
+                justify-content: space-around;
+            }
+        }
+
+        &:nth-child(3) {
+            margin-bottom: rem(35px);
+            justify-content: space-around;
+            @include media('tablet_above') {
+                margin-bottom: rem(150px);
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__point {
+        font: 400 #{rem(12px)} / 150% $ff;
+        padding: rem(7px) rem(23px);
+        width: max-content;
+        border-radius: rem(10px) 0 rem(10px) 0;
+        border: 1px solid #1a1a1a1a;
+        background: #ffffff1a;
+        color: #000;
+        backdrop-filter: blur(15px) saturate(180%) contrast(100%);
+
+        &:not(:has(img)) {
+            display: flex;
+            align-items: center;
+            gap: rem(8px);
+
+            &::before {
+                content: '';
+                border-radius: 50%;
+                flex-shrink: 0;
+                width: rem(6px);
+                height: rem(6px);
+            }
+        }
+
+        img {
+            width: rem(50px);
+        }
+
+        &--do {
+            &::before {
+                background: #b734e7;
+            }
+        }
+
+        &--done {
+            &::before {
+                background: #33b619;
+            }
+        }
+
+        &--progress {
+            &::before {
+                background: #2859c1;
+            }
+        }
+
+        &--hold {
+            &::before {
+                background: #ee9a14;
+            }
+        }
+    }
+
+    &__lines {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        z-index: -1;
+        display: none;
+        @include media('tablet_above') {
+            display: block;
+        }
+
+        svg {
+            display: block;
+            width: 100%;
+        }
+
+        &.is-visible {
+            .line--top path {
+                stroke-dashoffset: 0;
+                transition-delay: 0s;
+            }
+
+            .line--mid path {
+                stroke-dashoffset: 0;
+                transition-delay: 0.5s;
+            }
+
+            .line--bot path {
+                stroke-dashoffset: 0;
+                transition-delay: 1s;
+            }
+        }
+    }
+
+    &__cards {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: rem(12px);
+        padding-top: var(--section_indent);
+        @include media('tablet_above') {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(24px);
+        }
+        @include media('laptop_above') {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__partners {
+        overflow: hidden;
+        user-select: none;
+        padding-top: var(--section_indent);
+    }
+
+    &__marquee {
+        display: flex;
+        width: max-content;
+        gap: rem(16px);
+    }
+
+    &__track {
+        display: flex;
+        align-items: center;
+        gap: rem(16px);
+        animation: scrollMarquee 90s linear infinite;
+        will-change: transform;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        gap: rem(16px);
+        padding-right: rem(16px);
+        @include media('tablet_above') {
+            gap: rem(28px);
+            padding-right: rem(28px);
+        }
+    }
+
+    &__marquee img {
+        max-width: rem(140px);
+        opacity: 0.4;
+    }
+
+    @keyframes scrollMarquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .line {
+        position: absolute;
+
+        &--top {
+            top: rem(117px);
+
+            path {
+                stroke-dasharray: 2000;
+                stroke-dashoffset: 2000;
+            }
+        }
+
+        &--mid {
+            top: 50%;
+            path {
+                stroke-dasharray: 2000;
+                stroke-dashoffset: -2000;
+            }
+        }
+
+        &--bot {
+            bottom: rem(120px);
+            path {
+                stroke-dasharray: 2000;
+                stroke-dashoffset: 2000;
+            }
+        }
+
+        path {
+            fill: none;
+            stroke: #1a1a1a;
+            stroke-width: 1;
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            transition: stroke-dashoffset 4s
+                cubic-bezier(0.768, 0.304, 0.496, 0.884);
+        }
+    }
+}
